@@ -12,6 +12,8 @@
   
   <ion-list>
     <ion-item *ngFor="let element of weatherData.list">
+
+      
                 Etat actuel : {{ element.main.temp }} °C <br/>   
                               {{ element.weather[0].description }} <br/>
                               {{ element.wind.speed }} pour la vitesse du vent <br/>
