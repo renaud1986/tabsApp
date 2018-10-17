@@ -15,7 +15,7 @@
                 Etat actuel : {{ element.main.temp }} °C <br/>   
                               {{ element.weather[0].description }} <br/>
                               {{ element.wind.speed }} pour la vitesse du vent <br/>
-                Periode :  {{ convertDate(element.dt_txt) }}
+                Periode :  {{ convertDate(element.dt_txt) }} à {{ convertHours(element.dt_txt) }} h
     </ion-item>  
   </ion-list>
   </div>

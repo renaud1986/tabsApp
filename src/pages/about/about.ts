@@ -27,4 +27,9 @@ export class AboutPage {
     let currentDate = moment(str);
     return currentDate.format("DD-MM-YYYY ");
   }
+
+  convertHours(str: string):string{
+    let currentDate = moment(str);
+    return currentDate.format("HH-mm");
+  }
 }
