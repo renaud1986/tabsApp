@@ -1,0 +1,24 @@
+<!--
+  Generated template for the SkillsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>skills</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <p> Voici le centre d'interet actuel : {{ infos.type }} et de nom... {{ infos.sujet }} </p>
+  <ion-list inset>
+    <ion-item *ngFor="let artist of artists">
+      <h2> {{artist.name}} </h2>
+      <p> {{artist.popularity}} </p>
+      <p> {{artist.type}} </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

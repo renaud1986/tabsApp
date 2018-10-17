@@ -5,13 +5,80 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>Presentation du CV</h2>
+  <div class="intro1">
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    Ce CV a pour but d'etre orienter vers un profil de junior developer Android/IOS. <br>
+    Actuellement ce projet servira de base afin d'inclure des competences en Ionic , Angular et Cordova. <br>
   </p>
+  </div>
+  <div class="intro2">
   <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
+    Ci-dessous vous trouverez l'ensemble des informations de mon CV découpes en plusieurs parties. <br>
+    Les references sont indiquees clairement et contiennent aussi le degre des competences apprises. <br>
   </p>
+  </div>
+
+  <div text-center>
+     <ion-img src="../../assets/imgs/fond_cv.jpg"></ion-img>
+  </div>
+
+  <ion-card>
+
+    <ion-card-header color="green">
+      Formations
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <ion-label *ngFor="let formation of formations">{{formation}}</ion-label>
+      </ion-list>
+    </ion-card-content> 
+  </ion-card>
+  <ion-card>
+
+      <ion-card-header>
+        Experiences
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>Ici viendra se mettre le listing des experiences</p>
+      </ion-card-content>
+    
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      Competences
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+         <ion-item *ngFor="let icon of customIcons">
+            <ion-icon name="custom-{{icon}}" item-start></ion-icon>
+              
+         </ion-item>
+      </ion-list>
+    </ion-card-content>
+  
+</ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      Interets
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <button ion-item *ngFor="let interest of interests" (click)="loadingSkills(interest)">
+          <ion-icon name={{interest.type}} item-start></ion-icon>
+          {{interest.sujet}}
+        </button>
+      </ion-list>
+    </ion-card-content>
+  
+  </ion-card>
+  
 </ion-content>

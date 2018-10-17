@@ -7,5 +7,17 @@
 </ion-header>
 
 <ion-content padding>
+  <div *ngIf="weatherData">
+       <h3>{{weatherData.city.name}}</h3> 
+  
+  <ion-list>
+    <ion-item *ngFor="let element of weatherData.list">
+                Etat actuel : {{ element.main.temp }} °C <br/>   
+                              {{ element.weather[0].description }} <br/>
+                              {{ element.wind.speed }} pour la vitesse du vent <br/>
+                Periode :  {{ convertDate(element.dt_txt) }}
+    </ion-item>  
+  </ion-list>
+  </div>
 
 </ion-content>

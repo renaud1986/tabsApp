@@ -7,11 +7,55 @@
 </ion-header>
 
 <ion-content>
+  <ion-card id="card1" >
+  <ion-card-header>Me contacter</ion-card-header>  
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+     <p class="resume">
+      Vous trouverez ci-dessous toutes les informations <br> afin de me joindre.
+      En bas de la page se trouve un <br> formulaire si vous souhaitez m'envoyer 
+      un email directement.<br>  
+     </p> 
+    </ion-item> 
+    <ion-item>
+      <ion-icon name="home" item-start></ion-icon>
+      Adresse : Chaussee d'alsemberg 397, 1180 Uccle 
     </ion-item>
+    <ion-item>
+      <ion-icon name="md-at" item-start></ion-icon>
+      Email : marzana.ovb@gmail.com
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" item-start></ion-icon>
+      Telephone : 0498.18.58.33
+    </ion-item>
+  
   </ion-list>
+
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>Formulaire</ion-card-header>
+    <ion-card-content>
+        <ion-row>
+                  
+             <ion-col col-3>
+               <ion-label color="primary">Email : </ion-label>
+              </ion-col>
+             <ion-col col-9>
+             <ion-input type="email" placeholder="email"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+             <ion-col col-3> 
+             <ion-label color="primary">Sujet : </ion-label>
+             </ion-col>
+             <ion-col col-9>  
+             <ion-input type="text" placeholder="sujet"></ion-input>
+             </ion-col>
+        </ion-row>
+        <ion-textarea id="area" placeholder="Entrer Description"></ion-textarea>
+        <button class="button button-calm" (click)="sendEmail(message)">Envoyer</button>
+     </ion-card-content>
+  </ion-card>
 </ion-content>
